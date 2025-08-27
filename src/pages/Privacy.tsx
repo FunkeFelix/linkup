@@ -5,8 +5,8 @@ const Privacy = () => {
   return (
     <div className="min-h-screen bg-background">
       <div className="container-max section-padding">
-        <Link 
-          to="/" 
+        <Link
+          to="/"
           className="inline-flex items-center gap-2 text-primary hover:text-primary-dark transition-colors mb-8"
         >
           <ArrowLeft className="w-4 h-4" />
@@ -15,73 +15,159 @@ const Privacy = () => {
 
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold gradient-text mb-8">Datenschutzerklärung</h1>
-          
+
           <div className="prose prose-lg max-w-none space-y-8">
+            {/* 1. Verantwortlicher / Controller */}
             <section>
-              <h2 className="text-2xl font-semibold mb-4">1. Verantwortlicher</h2>
+              <h2 className="text-2xl font-semibold mb-4">1. Verantwortlicher (Art. 4 Nr. 7 DSGVO)</h2>
               <p className="text-muted-foreground leading-relaxed">
-                LinkUp App<br />
-                E-Mail: support@linkup-app.de
+                <strong>Felix Funke</strong><br />
+                Nußdorfer Straße 9<br />
+                88662 Überlingen, Deutschland<br />
+                Telefon: <a href="tel:+4917663364095">+49 (0) 176 6336 4095</a><br />
+                E-Mail: <a href="mailto:felixfunke456@gmail.com">felixfunke456@gmail.com</a>
               </p>
+              <p className="text-xs text-muted-foreground mt-2">Letzte Aktualisierung: 27.08.2025</p>
             </section>
 
+            {/* 2. Zwecke & Rechtsgrundlagen */}
             <section>
-              <h2 className="text-2xl font-semibold mb-4">2. Datenverarbeitung</h2>
+              <h2 className="text-2xl font-semibold mb-4">2. Zwecke &amp; Rechtsgrundlagen</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Wir verarbeiten personenbezogene Daten nur im erforderlichen Umfang zur Bereitstellung unserer Services. 
-                Die Datenverarbeitung erfolgt auf Grundlage der DSGVO und mit Ihrer Einwilligung.
+                Wir verarbeiten personenbezogene Daten zur Bereitstellung der App-Funktionen
+                (QR-Check-in, Teilnehmerliste, Verbindungen &amp; Chat), zur Kontoverwaltung,
+                Sicherheit und Support. Rechtsgrundlagen gem. Art. 6 Abs. 1 DSGVO:
               </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold mb-4">3. Welche Daten sammeln wir?</h2>
               <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-                <li>Profildaten (Name, E-Mail, Profilbild)</li>
-                <li>Event-Teilnahmedaten</li>
-                <li>Chat-Nachrichten (verschlüsselt)</li>
-                <li>Geräteinformationen für technische Optimierung</li>
+                <li><strong>(b) Vertragserfüllung</strong> – Nutzung der App-Funktionen</li>
+                <li><strong>(a) Einwilligung</strong> – z. B. optionale Angaben/Benachrichtigungen</li>
+                <li><strong>(f) Berechtigtes Interesse</strong> – z. B. Missbrauchs-/Betrugsvermeidung, App-Sicherheit</li>
               </ul>
             </section>
 
+            {/* 3. Datenkategorien */}
             <section>
-              <h2 className="text-2xl font-semibold mb-4">4. Datensicherheit</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Ihre Daten werden mit modernster Verschlüsselung geschützt und auf sicheren Firebase-Servern gespeichert. 
-                Chat-Nachrichten sind Ende-zu-Ende verschlüsselt.
+              <h2 className="text-2xl font-semibold mb-4">3. Welche Daten verarbeiten wir?</h2>
+              <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                <li><strong>Kontodaten</strong>: Name, E-Mail, ggf. Profilbild (Apple/Google Sign-In)</li>
+                <li><strong>Profil</strong>: optionale Bio/Verfügbarkeitsangaben</li>
+                <li><strong>Eventdaten</strong>: Event-Teilnahmen, QR-Check-ins, Verbindungsanfragen</li>
+                <li><strong>Kommunikation</strong>: Chats &amp; Metadaten (z. B. Zeitstempel)</li>
+                <li><strong>Technische Daten</strong>: Geräte-/App-Infos, Log-Daten, Fehlerberichte</li>
+                <li><strong>Zahlung/Abos</strong>: Daten zur Abrechnung, falls Premium genutzt wird</li>
+              </ul>
+              <p className="text-muted-foreground leading-relaxed mt-2">
+                Chats werden während Übertragung und Speicherung verschlüsselt („in transit“ &amp; „at rest“).
+                <strong> Ende-zu-Ende-Verschlüsselung (E2EE) wird nicht eingesetzt.</strong>
               </p>
             </section>
 
+            {/* 4. Herkunft */}
             <section>
-              <h2 className="text-2xl font-semibold mb-4">5. Ihre Rechte</h2>
+              <h2 className="text-2xl font-semibold mb-4">4. Herkunft der Daten</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Sie haben jederzeit das Recht auf Auskunft, Berichtigung, Löschung oder Sperrung Ihrer Daten. 
-                Kontaktieren Sie uns unter: support@linkup-app.de
+                Daten stammen aus Ihrer Eingabe in der App bzw. aus Apple/Google Sign-In.
+                Nutzungsdaten entstehen durch App-Funktionen (z. B. QR-Check-in, Verbindungen, Chat).
+              </p>
+            </section>
+
+            {/* 5. Empfänger / Auftragsverarbeiter */}
+            <section>
+              <h2 className="text-2xl font-semibold mb-4">5. Empfänger &amp; Auftragsverarbeitung</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Zur Bereitstellung der App nutzen wir u. a. folgende Dienste als Auftragsverarbeiter:
+              </p>
+              <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                <li>Google Firebase (Auth, Firestore/Storage, Crashlytics)</li>
+                <li>Apple/Google Sign-In (Authentifizierung)</li>
+                <li>App-Store-Abrechnung (Apple) für In-App-Käufe/Abos</li>
+              </ul>
+              <p className="text-muted-foreground leading-relaxed mt-2">
+                Die Verarbeitung kann außerhalb der EU/EWR stattfinden. In diesen Fällen werden geeignete
+                Garantien (z. B. EU-Standardvertragsklauseln) eingesetzt.
+              </p>
+            </section>
+
+            {/* 6. Abrechnung */}
+            <section>
+              <h2 className="text-2xl font-semibold mb-4">6. Abrechnung &amp; Abonnements</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Beim Premium-Abo (z. B. 2,99 €/Monat) werden zur Abwicklung notwendige Abrechnungsdaten verarbeitet.
+                Die Zahlungsabwicklung erfolgt über den jeweiligen App-Store-Anbieter.
+              </p>
+            </section>
+
+            {/* 7. Speicherdauer */}
+            <section>
+              <h2 className="text-2xl font-semibold mb-4">7. Speicherdauer</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Wir speichern Daten nur so lange, wie es für Zwecke der App erforderlich ist oder gesetzliche
+                Aufbewahrungsfristen bestehen. Sie können Ihr Konto jederzeit löschen; damit werden personenbezogene
+                Daten, soweit keine Aufbewahrungspflichten entgegenstehen, gelöscht.
+              </p>
+            </section>
+
+            {/* 8. Ihre Rechte */}
+            <section>
+              <h2 className="text-2xl font-semibold mb-4">8. Ihre Rechte</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung,
+                Datenübertragbarkeit sowie Widerspruch (Art. 15–21 DSGVO). Zudem besteht ein Beschwerderecht
+                bei einer Datenschutzaufsichtsbehörde. Kontakt:{" "}
+                <a href="mailto:felixfunke456@gmail.com">felixfunke456@gmail.com</a>
+              </p>
+            </section>
+
+            {/* 9. Minderjährige */}
+            <section>
+              <h2 className="text-2xl font-semibold mb-4">9. Minderjährige</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Die App richtet sich nicht an Kinder unter 16 Jahren. Eine Nutzung setzt ein Mindestalter
+                nach geltendem Recht bzw. die Zustimmung der Erziehungsberechtigten voraus.
+              </p>
+            </section>
+
+            {/* Impressum / Provider Identification */}
+            <section>
+              <h2 className="text-2xl font-semibold mb-4">Impressum</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                <strong>Diensteanbieter/Verantwortlich für Inhalte gem. § 55 Abs. 2 RStV</strong><br />
+                Felix Funke, Nußdorfer Straße 9, 88662 Überlingen, Deutschland<br />
+                Telefon: <a href="tel:+4917663364095">+49 (0) 176 6336 4095</a><br />
+                E-Mail: <a href="mailto:felixfunke456@gmail.com">felixfunke456@gmail.com</a><br />
+                USt-IdNr. nach § 27a UStG: <strong>DE 346946939</strong>
               </p>
             </section>
           </div>
 
+          {/* English summary box */}
           <div className="mt-12 p-6 bg-card rounded-2xl border">
-            <h3 className="text-xl font-semibold mb-4">English Version</h3>
-            
+            <h3 className="text-xl font-semibold mb-4">English Version (Summary)</h3>
             <section className="space-y-4">
               <h4 className="font-semibold">Data Controller</h4>
               <p className="text-muted-foreground">
-                LinkUp App - Email: support@linkup-app.de
+                <strong>Felix Funke</strong>, Nußdorfer Straße 9, 88662 Überlingen, Germany<br />
+                Phone: <a href="tel:+4917663364095">+49 176 6336 4095</a> · Email:{" "}
+                <a href="mailto:felixfunke456@gmail.com">felixfunke456@gmail.com</a>
               </p>
-              
-              <h4 className="font-semibold">Data We Collect</h4>
+
+              <h4 className="font-semibold">Data We Process</h4>
               <p className="text-muted-foreground">
-                We only process personal data necessary for our services: profile data, event participation, encrypted chat messages, and device information for technical optimization.
+                Account & profile data, event participation (QR check-ins), connections, chat content/metadata,
+                technical logs, and—if premium is used—billing-related data. Encryption in transit & at rest;
+                no end-to-end encryption.
               </p>
-              
-              <h4 className="font-semibold">Data Security</h4>
+
+              <h4 className="font-semibold">Legal Bases & Retention</h4>
               <p className="text-muted-foreground">
-                Your data is protected with state-of-the-art encryption and stored on secure Firebase servers. Chat messages are end-to-end encrypted.
+                Contract (Art. 6(1)(b)), consent (Art. 6(1)(a)), legitimate interests (Art. 6(1)(f)).
+                Data is retained only as necessary or as required by law. You can request deletion anytime.
               </p>
-              
-              <h4 className="font-semibold">Your Rights</h4>
+
+              <h4 className="font-semibold">Processors</h4>
               <p className="text-muted-foreground">
-                You have the right to access, correct, delete, or restrict your data at any time. Contact us at: support@linkup-app.de
+                Google Firebase (Auth/DB/Storage/Crash), Apple/Google Sign-In, app-store billing. International
+                transfers may apply with appropriate safeguards (e.g., SCCs).
               </p>
             </section>
           </div>

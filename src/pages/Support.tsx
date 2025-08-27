@@ -61,7 +61,7 @@ const Support = () => {
                   <Mail className="w-5 h-5 text-primary" />
                   <div>
                     <p className="font-medium">E-Mail Support</p>
-                    <p className="text-sm text-muted-foreground">support@linkup-app.de</p>
+                    <p className="text-sm text-muted-foreground">felixfunke456@gmail.com</p>
                   </div>
                 </div>
                 
